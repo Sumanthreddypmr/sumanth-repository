@@ -1,0 +1,11 @@
+region = "us-east-1"
+environment = "stage"
+vpc_cidr = "10.1.0.0/16"
+public_subnets = ["10.1.1.0/24", "10.1.2.0/24", "10.1.3.0/24"]
+private_subnets = ["10.1.10.0/24", "10.1.11.0/24", "10.1.12.0/24"]
+availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
+k8s_version = "1.27"
+desired_capacity = 3
+max_capacity = 10
+min_capacity = 2
+instance_type = "t3.medium"
