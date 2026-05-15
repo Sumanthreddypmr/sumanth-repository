@@ -1,0 +1,28 @@
+# Default values for appointment microservice
+replicaCount: 1
+
+image:
+  repository: appointment
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 5001
+
+ingress:
+  host: example.com
+
+resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

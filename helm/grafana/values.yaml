@@ -1,0 +1,28 @@
+# Default values for Grafana
+replicaCount: 1
+
+image:
+  repository: grafana/grafana
+  tag: "9.3.0"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+
+adminUser: admin
+adminPassword: admin
+
+resources: {}
+  # limits:
+  #   cpu: 500m
+  #   memory: 512Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

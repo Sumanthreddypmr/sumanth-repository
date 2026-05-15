@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "appointment.fullname" . }}-config
+  labels:
+    app.kubernetes.io/name: {{ include "appointment.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+data:
+  FLASK_ENV: "development"
+  FLASK_DEBUG: "true"
